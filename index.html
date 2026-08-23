@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda | Nombre & Nombre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8a735c;
+            --bg-light: #fdfbf7;
+            --text: #2c2c2c;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text);
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 70px 20px 40px;
+            background: linear-gradient(rgba(253, 251, 247, 0.85), rgba(253, 251, 247, 0.85)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80') center/cover;
+        }
+
+        .names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 30px 0;
+        }
+
+        .time-box {
+            background: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            min-width: 65px;
+            font-size: 0.8rem;
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .section {
+            padding: 40px 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            border: 1px solid #f0e6df;
+        }
+
+        .card h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 28px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        footer {
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p class="subtitle">¡Nos Casamos!</p>
+        <h1 class="names">Nombre & Nombre</h1>
+        <p>15 de Noviembre de 2026</p>
+
+        <div class="countdown">
+            <div class="time-box"><span id="days">00</span>Días</div>
+            <div class="time-box"><span id="hours">00</span>Hs</div>
+            <div class="time-box"><span id="minutes">00</span>Min</div>
+            <div class="time-box"><span id="seconds">00</span>Seg</div>
+        </div>
+    </header>
+
+    <div class="section">
+        <div class="card">
+            <h2>Ceremonia y Fiesta</h2>
+            <p><strong>Lugar:</strong> Salón de Eventos</p>
+            <p><strong>Dirección:</strong> Av. Ejemplo 1234</p>
+            <p><strong>Hora:</strong> 18:00 hs</p>
+            <a href="https://maps.google.com" target="_blank" class="btn">Ver en Google Maps</a>
+        </div>
+
+        <div class="card">
+            <h2>Dress Code</h2>
+            <p><strong>Elegante</strong></p>
+            <p>Queremos que te veas increíble para festejar juntos.</p>
+        </div>
+
+        <div class="card">
+            <h2>Regalos</h2>
+            <p>Tu presencia es nuestro mejor regalo. Si deseás hacernos un presente:</p>
+            <p style="margin-top: 10px;"><strong>CBU:</strong> 0000000000000000000000</p>
+            <p><strong>Alias:</strong> novios.casamiento</p>
+        </div>
+
+        <div class="card">
+            <h2>Confirmación de Asistencia</h2>
+            <form id="rsvpForm">
+                <input type="text" id="nombre" placeholder="Tu Nombre y Apellido" required>
+                <select id="asistencia" required>
+                    <option value="">¿Asistirás?</option>
+                    <option value="Sí">¡Sí, ahí estaré!</option>
+                    <option value="No">Lamentablemente no puedo</option>
+                </select>
+                <input type="text" id="menu" placeholder="Restricción alimentaria (Celíaco, vegetariano, etc.)">
+                <button type="submit" class="btn">Confirmar por WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>¡Nos vemos pronto!</p>
+    </footer>
+
+    <script>
+        // Fecha de la boda
+        const weddingDate = new Date("Nov 15, 2026 18:00:00").getTime();
+
+        setInterval(() => {
+            const now = new Date().getTime();
+            const dist = weddingDate - now;
+
+            if (dist > 0) {
+                document.getElementById("days").innerText = Math.floor(dist / (1000 * 60 * 60 * 24));
+                document.getElementById("hours").innerText = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                document.getElementById("minutes").innerText = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+                document.getElementById("seconds").innerText = Math.floor((dist % (1000 * 60)) / 1000);
+            }
+        }, 1000);
+
+        // Envío directo de RSVP a WhatsApp
+        document.getElementById('rsvpForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const telefono = "5493510000000"; // Reemplazar con tu número
+            const nombre = document.getElementById('nombre').value;
+            const asistencia = document.getElementById('asistencia').value;
+            const menu = document.getElementById('menu').value;
+            
+            const texto = `¡Hola! Confirmo mi asistencia.%0ANombre: ${nombre}%0A¿Asiste?: ${asistencia}%0ARestricción alimentaria: ${menu || 'Ninguna'}`;
+            window.open(`https://wa.me/${telefono}?text=${texto}`, '_blank');
+        });
+    </script>
+</body>
+              </html>
+              
