@@ -8,7 +8,7 @@
   <style>
     :root {
       --primary: #8a735c;
-      --bg-light: #fdbf7;
+      --bg-light: #fdfbf7;
       --text: #2c2c2c;
     }
     * {
@@ -95,6 +95,12 @@
     .btn:hover {
       opacity: 0.9;
     }
+    .note {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 10px;
+      font-style: italic;
+    }
     form input, form select {
       width: 100%;
       padding: 12px;
@@ -127,6 +133,7 @@
   <!-- Ceremonia Religiosa -->
   <div class="card">
     <h2>Ceremonia Religiosa</h2>
+    <p><strong>Parroquia Nuestra Señora de Lourdes</strong></p>
     <p><strong>Hora:</strong> 20:00 hs</p>
     <a href="https://maps.app.goo.gl/qFubYd1baecdgXVA8" target="_blank" class="btn">Ver en Google Maps</a>
   </div>
@@ -134,6 +141,7 @@
   <!-- Civil -->
   <div class="card">
     <h2>Civil</h2>
+    <p><strong>Salón de Eventos La Legua</strong></p>
     <p><strong>Hora:</strong> 21:30 hs</p>
     <a href="https://maps.app.goo.gl/UwrcN4AB2QFfQaxr6" target="_blank" class="btn">Ver en Google Maps</a>
   </div>
@@ -143,15 +151,22 @@
     <h2>Dress Code</h2>
     <p><strong>Elegante</strong></p>
     <p>Queremos que te veas increíble para festejar juntos.</p>
+    <p style="margin-top: 10px;"><em>Les pedimos a las invitadas evitar colores claros.</em></p>
   </div>
 
-  <!-- Regalos -->
+  <!-- Tarjetas / Entradas -->
   <div class="card">
-    <h2>Regalos</h2>
-    <p>Tu presencia es nuestro mejor regalo. Si deseás hacernos un presente:</p>
-    <br>
-    <p><strong>CBU:</strong> 0000000000000000000000</p>
-    <p><strong>Alias:</strong> novios.casamiento</p>
+    <h2>Tarjetas</h2>
+    <p><strong>Mayores:</strong> $67.000</p>
+    <p><strong>De 3 a 11 años inclusive:</strong> $35.000</p>
+    <p><strong>Menores de 3 años:</strong> Sin cargo</p>
+    <p class="note">Tener en cuenta que el valor se actualiza el 10 de cada mes.</p>
+
+    <div style="margin-top: 20px; text-align: left; background: #f9f9f9; padding: 15px; border-radius: 8px;">
+      <p style="text-align: center; margin-bottom: 8px;"><strong>Datos para la transferencia:</strong></p>
+      <p><strong>Alias:</strong> gabrielcampana</p>
+      <p><strong>CBU:</strong> 0000003100103911983913</p>
+    </div>
   </div>
 
   <!-- Confirmación de Asistencia -->
@@ -194,7 +209,7 @@
     // Envío directo de RSVP a WhatsApp
     document.getElementById('rsvpForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      const telefono = "5493516212344"; // Reemplazá con tu número de teléfono real con código de país
+      const telefono = "5493516212344"; // Reemplazá con tu número de teléfono real
       const nombre = document.getElementById('nombre').value;
       const asistencia = document.getElementById('asistencia').value;
       const menu = document.getElementById('menu').value;
