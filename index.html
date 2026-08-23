@@ -1,208 +1,212 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Boda | Nombre & Nombre</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #8a735c;
-            --bg-light: #fdfbf7;
-            --text: #2c2c2c;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-light);
-            color: var(--text);
-            text-align: center;
-            line-height: 1.6;
-        }
-
-        header {
-            padding: 70px 20px 40px;
-            background: linear-gradient(rgba(253, 251, 247, 0.85), rgba(253, 251, 247, 0.85)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80') center/cover;
-        }
-
-        .names {
-            font-family: 'Great Vibes', cursive;
-            font-size: 4rem;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 1rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin: 30px 0;
-        }
-
-        .time-box {
-            background: white;
-            padding: 12px 16px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            min-width: 65px;
-            font-size: 0.8rem;
-        }
-
-        .time-box span {
-            display: block;
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .section {
-            padding: 40px 20px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px 20px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-            border: 1px solid #f0e6df;
-        }
-
-        .card h2 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 28px;
-            background-color: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-        }
-
-        form input, form select {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-        }
-
-        footer {
-            padding: 30px;
-            font-size: 0.85rem;
-            color: #888;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestra Boda | Melina & Gabriel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #8a735c;
+      --bg-light: #fdbf7;
+      --text: #2c2c2c;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background-color: var(--bg-light);
+      color: var(--text);
+      text-align: center;
+      line-height: 1.6;
+      padding: 20px 10px;
+    }
+    header {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: var(--primary);
+      margin: 10px 0;
+      font-weight: normal;
+    }
+    .date-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 25px 0 40px;
+    }
+    .time-box {
+      background: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      min-width: 65px;
+    }
+    .time-box span {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+    .card {
+      background: #fff;
+      max-width: 500px;
+      margin: 0 auto 25px;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .card h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-weight: normal;
+    }
+    .btn {
+      display: inline-block;
+      background-color: var(--primary);
+      color: #fff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-top: 15px;
+      font-weight: 600;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+    footer {
+      padding: 30px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <p class="subtitle">¡Nos Casamos!</p>
-        <h1 class="names">Nombre & Nombre</h1>
-        <p>15 de Noviembre de 2026</p>
+  <header>
+    <p class="subtitle">¡Nos Casamos!</p>
+    <h1>Melina & Gabriel</h1>
+    <p class="date-title">02 de Abril de 2027</p>
+  </header>
 
-        <div class="countdown">
-            <div class="time-box"><span id="days">00</span>Días</div>
-            <div class="time-box"><span id="hours">00</span>Hs</div>
-            <div class="time-box"><span id="minutes">00</span>Min</div>
-            <div class="time-box"><span id="seconds">00</span>Seg</div>
-        </div>
-    </header>
+  <div class="countdown">
+    <div class="time-box"><span id="days">0</span>Días</div>
+    <div class="time-box"><span id="hours">0</span>Hs</div>
+    <div class="time-box"><span id="minutes">0</span>Min</div>
+    <div class="time-box"><span id="seconds">0</span>Seg</div>
+  </div>
 
-    <div class="section">
-        <div class="card">
-            <h2>Ceremonia y Fiesta</h2>
-            <p><strong>Lugar:</strong> Salón de Eventos</p>
-            <p><strong>Dirección:</strong> Av. Ejemplo 1234</p>
-            <p><strong>Hora:</strong> 18:00 hs</p>
-            <a href="https://maps.google.com" target="_blank" class="btn">Ver en Google Maps</a>
-        </div>
+  <!-- Ceremonia Religiosa -->
+  <div class="card">
+    <h2>Ceremonia Religiosa</h2>
+    <p><strong>Hora:</strong> 20:00 hs</p>
+    <a href="https://maps.app.goo.gl/qFubYd1baecdgXVA8" target="_blank" class="btn">Ver en Google Maps</a>
+  </div>
 
-        <div class="card">
-            <h2>Dress Code</h2>
-            <p><strong>Elegante</strong></p>
-            <p>Queremos que te veas increíble para festejar juntos.</p>
-        </div>
+  <!-- Civil -->
+  <div class="card">
+    <h2>Civil</h2>
+    <p><strong>Hora:</strong> 21:30 hs</p>
+    <a href="https://maps.app.goo.gl/UwrcN4AB2QFfQaxr6" target="_blank" class="btn">Ver en Google Maps</a>
+  </div>
 
-        <div class="card">
-            <h2>Regalos</h2>
-            <p>Tu presencia es nuestro mejor regalo. Si deseás hacernos un presente:</p>
-            <p style="margin-top: 10px;"><strong>CBU:</strong> 0000000000000000000000</p>
-            <p><strong>Alias:</strong> novios.casamiento</p>
-        </div>
+  <!-- Dress Code -->
+  <div class="card">
+    <h2>Dress Code</h2>
+    <p><strong>Elegante</strong></p>
+    <p>Queremos que te veas increíble para festejar juntos.</p>
+  </div>
 
-        <div class="card">
-            <h2>Confirmación de Asistencia</h2>
-            <form id="rsvpForm">
-                <input type="text" id="nombre" placeholder="Tu Nombre y Apellido" required>
-                <select id="asistencia" required>
-                    <option value="">¿Asistirás?</option>
-                    <option value="Sí">¡Sí, ahí estaré!</option>
-                    <option value="No">Lamentablemente no puedo</option>
-                </select>
-                <input type="text" id="menu" placeholder="Restricción alimentaria (Celíaco, vegetariano, etc.)">
-                <button type="submit" class="btn">Confirmar por WhatsApp</button>
-            </form>
-        </div>
-    </div>
+  <!-- Regalos -->
+  <div class="card">
+    <h2>Regalos</h2>
+    <p>Tu presencia es nuestro mejor regalo. Si deseás hacernos un presente:</p>
+    <br>
+    <p><strong>CBU:</strong> 0000000000000000000000</p>
+    <p><strong>Alias:</strong> novios.casamiento</p>
+  </div>
 
-    <footer>
-        <p>¡Nos vemos pronto!</p>
-    </footer>
+  <!-- Confirmación de Asistencia -->
+  <div class="card">
+    <h2>Confirmación de Asistencia</h2>
+    <form id="rsvpForm">
+      <input type="text" id="nombre" placeholder="Tu Nombre y Apellido" required>
+      <select id="asistencia" required>
+        <option value="" disabled selected>¿Asistirás?</option>
+        <option value="Sí, asistiré">Sí, asistiré</option>
+        <option value="No podré asistir">No podré asistir</option>
+      </select>
+      <input type="text" id="menu" placeholder="Restricción alimentaria (Celiaco, vegetariano, etc.)">
+      <button type="submit" class="btn">Confirmar por WhatsApp</button>
+    </form>
+  </div>
 
-    <script>
-        // Fecha de la boda
-        const weddingDate = new Date("Nov 15, 2026 18:00:00").getTime();
+  <footer>
+    ¡Nos vemos pronto!
+  </footer>
 
-        setInterval(() => {
-            const now = new Date().getTime();
-            const dist = weddingDate - now;
+  <script>
+    // Fecha de la boda: 2 de Abril de 2027 a las 20:00 hs
+    const weddingDate = new Date("April 2, 2027 20:00:00").getTime();
 
-            if (dist > 0) {
-                document.getElementById("days").innerText = Math.floor(dist / (1000 * 60 * 60 * 24));
-                document.getElementById("hours").innerText = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                document.getElementById("minutes").innerText = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
-                document.getElementById("seconds").innerText = Math.floor((dist % (1000 * 60)) / 1000);
-            }
-        }, 1000);
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const dist = weddingDate - now;
 
-        // Envío directo de RSVP a WhatsApp
-        document.getElementById('rsvpForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const telefono = "5493510000000"; // Reemplazar con tu número
-            const nombre = document.getElementById('nombre').value;
-            const asistencia = document.getElementById('asistencia').value;
-            const menu = document.getElementById('menu').value;
-            
-            const texto = `¡Hola! Confirmo mi asistencia.%0ANombre: ${nombre}%0A¿Asiste?: ${asistencia}%0ARestricción alimentaria: ${menu || 'Ninguna'}`;
-            window.open(`https://wa.me/${telefono}?text=${texto}`, '_blank');
-        });
-    </script>
+      if (dist > 0) {
+        document.getElementById("days").innerText = Math.floor(dist / (1000 * 60 * 60 * 24));
+        document.getElementById("hours").innerText = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById("minutes").innerText = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+        document.getElementById("seconds").innerText = Math.floor((dist % (1000 * 60)) / 1000);
+      } else {
+        clearInterval(timer);
+      }
+    }, 1000);
+
+    // Envío directo de RSVP a WhatsApp
+    document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const telefono = "5493516212344"; // Reemplazá con tu número de teléfono real con código de país
+      const nombre = document.getElementById('nombre').value;
+      const asistencia = document.getElementById('asistencia').value;
+      const menu = document.getElementById('menu').value;
+
+      let texto = `¡Hola! Confirmo mi asistencia.%0ANombre: ${encodeURIComponent(nombre)}%0AAsistencia: ${encodeURIComponent(asistencia)}`;
+      if (menu) {
+        texto += `%0ARestricción alimentaria: ${encodeURIComponent(menu)}`;
+      }
+
+      window.open(`https://wa.me/${telefono}?text=${texto}`, '_blank');
+    });
+  </script>
+
 </body>
-              </html>
-              
+</html>
