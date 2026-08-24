@@ -1,61 +1,243 @@
-<style>
-  :root {
-    --primary: #8a735c;
-    --bg-light: #fdfbf7;
-    --text: #2c2c2c;
-  }
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-  }
-  body {
-    background-color: var(--bg-light);
-    color: var(--text);
-    text-align: center;
-    line-height: 1.6;
-    padding-bottom: 20px;
-  }
-  .hero-photo {
-    width: 100%;
-    max-height: 350px;
-    object-fit: cover;
-    filter: grayscale(100%);
-    display: block;
-  }
-  header {
-    margin-bottom: 30px;
-  }
-  .header-content {
-    padding-top: 25px;
-  }
-  .subtitle {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--primary);
-  }
-  h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3.5rem;
-    color: var(--primary);
-    margin: 10px 0;
-    font-weight: normal;
-  }
-  .date-title {
-    font-size: 1.3rem;
-    font-weight: 600;
-  }
-</style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestra Boda | Melina & Gabriel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #8a735c;
+      --bg-light: #fdfbf7;
+      --text: #2c2c2c;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background-color: var(--bg-light);
+      color: var(--text);
+      text-align: center;
+      line-height: 1.6;
+      padding-bottom: 20px;
+    }
+    header {
+      margin-bottom: 30px;
+    }
+    .hero-photo {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      display: block;
+    }
+    .header-content {
+      padding-top: 25px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: var(--primary);
+      margin: 10px 0;
+      font-weight: normal;
+    }
+    .date-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 25px 10px 40px;
+    }
+    .time-box {
+      background: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      min-width: 65px;
+    }
+    .time-box span {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+    .card {
+      background: #fff;
+      max-width: 500px;
+      margin: 0 auto 25px;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .card h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-weight: normal;
+    }
+    .btn {
+      display: inline-block;
+      background-color: var(--primary);
+      color: #fff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-top: 15px;
+      font-weight: 600;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+    footer {
+      padding: 30px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
 
-<header>
-  <!-- Foto en ancho completo y blanco y negro -->
-  <img src="foto.jpg" alt="Melina y Gabriel" class="hero-photo">
-  
-  <div class="header-content">
-    <p class="subtitle">¡Nos Casamos!</p>
-    <h1>Melina & Gabriel</h1>
-    <p class="date-title">02 de Abril de 2027</p>
+  <header>
+    <!-- Foto en blanco y negro a ancho completo -->
+    <img src="foto.jpg" alt="Melina y Gabriel" class="hero-photo">
+    
+    <div class="header-content">
+      <p class="subtitle">¡Nos Casamos!</p>
+      <h1>Melina & Gabriel</h1>
+      <p class="date-title">02 de Abril de 2027</p>
+    </div>
+  </header>
+
+  <div class="countdown">
+    <div class="time-box"><span id="days">0</span>Días</div>
+    <div class="time-box"><span id="hours">0</span>Hs</div>
+    <div class="time-box"><span id="minutes">0</span>Min</div>
+    <div class="time-box"><span id="seconds">0</span>Seg</div>
   </div>
-</header>
+
+  <!-- Ceremonia Religiosa -->
+  <div class="card">
+    <h2>Ceremonia Religiosa</h2>
+    <p><strong>Parroquia Nuestra Señora de Lourdes</strong></p>
+    <p><strong>Hora:</strong> 20:00 hs</p>
+    <a href="https://maps.app.goo.gl/qFubYd1baecdgXVA8" target="_blank" class="btn">Ver en Google Maps</a>
+  </div>
+
+  <!-- Civil -->
+  <div class="card">
+    <h2>Civil</h2>
+    <p><strong>Salón de Eventos La Legua</strong></p>
+    <p><strong>Hora:</strong> 21:30 hs</p>
+    <a href="https://maps.app.goo.gl/UwrcN4AB2QFfQaxr6" target="_blank" class="btn">Ver en Google Maps</a>
+  </div>
+
+  <!-- Dress Code -->
+  <div class="card">
+    <h2>Dress Code</h2>
+    <p><strong>Elegante</strong></p>
+    <p>Queremos que te veas increíble para festejar juntos.</p>
+    <p style="margin-top: 10px;"><em>Les pedimos a las invitadas evitar colores claros.</em></p>
+  </div>
+
+  <!-- Tarjetas / Entradas -->
+  <div class="card">
+    <h2>Tarjetas</h2>
+    <p><strong>Mayores:</strong> $67.000</p>
+    <p><strong>De 3 a 11 años inclusive:</strong> $35.000</p>
+    <p><strong>Menores de 3 años:</strong> Sin cargo</p>
+    <p class="note">Tener en cuenta que el valor se actualiza el 10 de cada mes.</p>
+
+    <div style="margin-top: 20px; text-align: left; background: #f9f9f9; padding: 15px; border-radius: 8px;">
+      <p style="text-align: center; margin-bottom: 8px;"><strong>Datos para la transferencia:</strong></p>
+      <p><strong>Alias:</strong> gabrielcampana</p>
+      <p><strong>CBU:</strong> 0000003100103911983913</p>
+    </div>
+  </div>
+
+  <!-- Confirmación de Asistencia -->
+  <div class="card">
+    <h2>Confirmación de Asistencia</h2>
+    <form id="rsvpForm">
+      <input type="text" id="nombre" placeholder="Tu Nombre y Apellido" required>
+      <select id="asistencia" required>
+        <option value="" disabled selected>¿Asistirás?</option>
+        <option value="Sí, asistiré">Sí, asistiré</option>
+        <option value="No podré asistir">No podré asistir</option>
+      </select>
+      <input type="text" id="menu" placeholder="Restricción alimentaria (Celiaco, vegetariano, etc.)">
+      <button type="submit" class="btn">Confirmar por WhatsApp</button>
+    </form>
+  </div>
+
+  <footer>
+    ¡Nos vemos pronto!
+  </footer>
+
+  <script>
+    // Fecha de la boda: 2 de Abril de 2027 a las 20:00 hs
+    const weddingDate = new Date("April 2, 2027 20:00:00").getTime();
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const dist = weddingDate - now;
+
+      if (dist > 0) {
+        document.getElementById("days").innerText = Math.floor(dist / (1000 * 60 * 60 * 24));
+        document.getElementById("hours").innerText = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById("minutes").innerText = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+        document.getElementById("seconds").innerText = Math.floor((dist % (1000 * 60)) / 1000);
+      } else {
+        clearInterval(timer);
+      }
+    }, 1000);
+
+    // Envío directo de RSVP a WhatsApp
+    document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const telefono = "5493516212334";
+      const nombre = document.getElementById('nombre').value;
+      const asistencia = document.getElementById('asistencia').value;
+      const menu = document.getElementById('menu').value;
+
+      let texto = `¡Hola! Confirmo mi asistencia.%0ANombre: ${encodeURIComponent(nombre)}%0AAsistencia: ${encodeURIComponent(asistencia)}`;
+      if (menu) {
+        texto += `%0ARestricción alimentaria: ${encodeURIComponent(menu)}`;
+      }
+
+      window.open(`https://wa.me/${telefono}?text=${texto}`, '_blank');
+    });
+  </script>
+
+</body>
+</html>
